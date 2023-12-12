@@ -1,1 +1,13 @@
-# cognifyz-internship_3
+# cognifyz-internship_3def validation_email(email):
+
+    import re
+
+    patt = r'[a-zA-Z0-9.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+
+    pattern = re.compile(patt)
+
+    return re.match(pattern, email) is not None
+
+
+
+print(validation_email("python@google.con"))
